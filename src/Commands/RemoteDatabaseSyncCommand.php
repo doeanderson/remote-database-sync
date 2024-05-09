@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace DoeAnderson\RemoteDatabaseSync\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class RemoteDatabaseSyncCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'remote-database-sync';
 
     public $description = 'My command';
 
