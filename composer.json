@@ -7,7 +7,7 @@
         "remote-database-sync"
     ],
     "homepage": "https://github.com/doeanderson/remote-database-sync",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jeremy Dunn",
