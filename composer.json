@@ -1,24 +1,27 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "doeanderson/remote-database-sync",
+    "description": "Download a remote database to your local environment with a simple artisan command.",
     "keywords": [
-        ":vendor_name",
+        "Doe Anderson",
         "laravel",
-        ":package_slug"
+        "remote-database-sync"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/doeanderson/remote-database-sync",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Jeremy Dunn",
+            "email": "jdunn@doeanderson.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.1",
+        "illuminate/contracts": "^10.0||^11.0",
+        "prodigyphp/laravel-ssh-tunnel": "^3.4",
         "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0"
+        "spatie/temporary-directory": "^2.2",
+        "symfony/process": "^6.4"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -35,19 +38,19 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "DoeAnderson\\RemoteDatabaseSync\\": "src/",
+            "DoeAnderson\\RemoteDatabaseSync\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "DoeAnderson\\RemoteDatabaseSync\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-remote-database-sync --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,11 +76,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+                "DoeAnderson\\RemoteDatabaseSync\\RemoteDatabaseSyncServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
