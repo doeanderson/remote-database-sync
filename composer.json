@@ -7,7 +7,7 @@
         "remote-database-sync"
     ],
     "homepage": "https://github.com/doeanderson/remote-database-sync",
-    "license": "MIT",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Jeremy Dunn",
@@ -17,8 +17,11 @@
     ],
     "require": {
         "php": "^8.1",
+        "illuminate/contracts": "^10.0||^11.0",
+        "prodigyphp/laravel-ssh-tunnel": "^3.4",
         "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0"
+        "spatie/temporary-directory": "^2.2",
+        "symfony/process": "^6.4"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -74,10 +77,7 @@
         "laravel": {
             "providers": [
                 "DoeAnderson\\RemoteDatabaseSync\\RemoteDatabaseSyncServiceProvider"
-            ],
-            "aliases": {
-                "RemoteDatabaseSync": "DoeAnderson\\RemoteDatabaseSync\\Facades\\RemoteDatabaseSync"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
