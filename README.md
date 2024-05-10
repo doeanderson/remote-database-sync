@@ -6,6 +6,16 @@ This package allows you to sync a remote database to your local environment.
 
 You can install the package via composer:
 
+Add the following to your `composer.json` file:
+```json
+"repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/doeanderson/remote-database-sync"
+  }
+]
+```
+
 ```bash
 composer require --dev doeanderson/remote-database-sync
 ```
